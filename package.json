@@ -1,5 +1,5 @@
 {
-  "name": "submission-openmusic-v1-api",
+  "name": "openmusic-v1-api",
   "version": "1.0.0",
   "description": "Open Music API v1 - Dicoding Submission",
   "main": "index.js",
