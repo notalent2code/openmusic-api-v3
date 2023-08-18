@@ -6,7 +6,7 @@ const {
   mapSongDB,
   filterTitleSongByParam,
   filterPerformerSongByParam,
-} = require("../utils");
+} = require("../utils/map-filter");
 
 class SongService {
   constructor() {
