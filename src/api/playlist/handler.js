@@ -1,23 +1,13 @@
+const autoBind = require("auto-bind");
 const NotFoundError = require('../../errors/NotFoundError');
 const AuthorizationError = require('../../errors/AuthorizationError');
 
 class PlaylistHandler {
   constructor(service, validator) {
-
     this._service = service;
     this._validator = validator;
 
-    // Handler untuk Playlist
-    this.postPlaylistHandler = this.postPlaylistHandler.bind(this);
-    this.getPlaylistHandler = this.getPlaylistHandler.bind(this);
-    this.getPlaylistByIdHandler = this.getPlaylistByIdHandler.bind(this);
-    this.deletePlaylistByIdHandler = this.deletePlaylistByIdHandler.bind(this);
-
-    // Handler untuk Playlist Song
-    this.postPlaylistSongHandler = this.postPlaylistSongHandler.bind(this);
-    this.getPlaylistSongsHandler = this.getPlaylistSongsHandler.bind(this);
-    this.deletePlaylistSongByIdHandler = this.deletePlaylistSongByIdHandler.bind(this);
-    this.getPlaylistActivitiesHandler = this.getPlaylistActivitiesHandler.bind(this);
+    autoBind(this);
   }
 
   async postPlaylistHandler(request, h) {
