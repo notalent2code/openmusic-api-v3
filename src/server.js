@@ -1,6 +1,6 @@
-require("dotenv").config();
 const Hapi = require("@hapi/hapi");
 const Jwt = require("@hapi/jwt");
+const config = require("./utils/config");
 const ClientError = require("./errors/ClientError");
 
 // Album
@@ -42,8 +42,8 @@ const init = async () => {
   const userService = new UserService();
   
   const server = Hapi.server({
-    port: process.env.PORT,
-    host: process.env.HOST,
+    port: config.app.port,
+    host: config.app.host,
     routes: {
       cors: {
         origin: ["*"],
@@ -85,12 +85,12 @@ const init = async () => {
   ]);
 
   server.auth.strategy("music_jwt", "jwt", {
-    keys: process.env.ACCESS_TOKEN_KEY,
+    keys: config.jwt.accessKey,
     verify: {
       aud: false,
       iss: false,
       sub: false,
-      maxAgeSec: process.env.ACCESS_TOKEN_AGE,
+      maxAgeSec: config.jwt.accessAge,
     },
     validate: (artifacts) => ({
       isValid: true,
