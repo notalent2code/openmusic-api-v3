@@ -1,7 +1,7 @@
 {
-  "name": "openmusic-api-v2",
+  "name": "openmusic-api-v3",
   "version": "1.0.0",
-  "description": "Open Music API v2 - Dicoding Submission",
+  "description": "Open Music API v3 - Dicoding Submission",
   "main": "server.js",
   "keywords": [],
   "author": "Rihlan Lumenda Suherman",
@@ -20,13 +20,16 @@
   },
   "dependencies": {
     "@hapi/hapi": "^20.2.1",
+    "@hapi/inert": "^7.1.0",
     "@hapi/jwt": "^3.2.0",
+    "amqplib": "^0.10.3",
     "auto-bind": "4",
     "bcrypt": "^5.1.1",
     "dotenv": "^16.0.0",
     "joi": "^17.6.0",
     "nanoid": "^3.3.2",
     "node-pg-migrate": "^6.2.1",
-    "pg": "^8.7.3"
+    "pg": "^8.7.3",
+    "redis": "^4.6.7"
   }
 }
