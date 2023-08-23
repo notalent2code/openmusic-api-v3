@@ -10,14 +10,11 @@ const config = {
         accessAge: process.env.ACCESS_TOKEN_AGE,
         refreshKey: process.env.REFRESH_TOKEN_KEY,
     },
-    s3: {
-        bucketName: process.env.AWS_BUCKET_NAME,
-    },
     rabbitMQ: {
         server: process.env.RABBITMQ_SERVER,
     },
     redis: {
-        host: process.env.REDIS_HOST,
+        host: process.env.REDIS_SERVER,
     }
 };
 
