@@ -1,7 +1,7 @@
 const { Pool } = require("pg");
 const { nanoid } = require("nanoid");
-const InvariantError = require("../errors/InvariantError");
-const NotFoundError = require("../errors/NotFoundError");
+const InvariantError = require("../../errors/InvariantError");
+const NotFoundError = require("../../errors/NotFoundError");
 
 class CollaborationService {
   constructor() {

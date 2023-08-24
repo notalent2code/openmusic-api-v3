@@ -1,12 +1,12 @@
 const { nanoid } = require("nanoid");
 const { Pool } = require("pg");
-const InvariantError = require("../errors/InvariantError");
-const NotFoundError = require("../errors/NotFoundError");
+const InvariantError = require("../../errors/InvariantError");
+const NotFoundError = require("../../errors/NotFoundError");
 const {
   mapSongDB,
   filterTitleSongByParam,
   filterPerformerSongByParam,
-} = require("../utils/map-filter");
+} = require("../../utils/map-filter");
 
 class SongService {
   constructor() {

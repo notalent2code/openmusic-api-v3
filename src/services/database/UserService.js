@@ -1,8 +1,8 @@
 const { nanoid } = require("nanoid");
 const { Pool } = require("pg");
 const bcrypt = require("bcrypt");
-const InvariantError = require("../errors/InvariantError");
-const AuthenticationError = require("../errors/AuthenticationError");
+const InvariantError = require("../../errors/InvariantError");
+const AuthenticationError = require("../../errors/AuthenticationError");
 
 class UserService {
   constructor() {
